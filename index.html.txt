@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nova Launcher</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">NovaLauncher</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Features</a>
+<a href="#">Download</a>
+<a href="#">Community</a>
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<h1>Next Generation Minecraft Launcher</h1>
+
+<p>Fast • Lightweight • Mod Ready</p>
+
+<a class="download-btn" href="#">Download Now</a>
+
+</section>
+
+
+<section class="features">
+
+<div class="feature-card">
+<h3>⚡ Fast Launch</h3>
+<p>Start Minecraft in seconds with optimized loading.</p>
+</div>
+
+<div class="feature-card">
+<h3>🧩 Mod Support</h3>
+<p>Supports Forge, Fabric, and custom modpacks.</p>
+</div>
+
+<div class="feature-card">
+<h3>🎮 PvP Optimized</h3>
+<p>Built for smooth gameplay and performance.</p>
+</div>
+
+<div class="feature-card">
+<h3>🔄 Auto Updates</h3>
+<p>The launcher updates automatically.</p>
+</div>
+
+</section>
+
+
+<section class="screenshots">
+
+<h2>Launcher Preview</h2>
+
+<div class="gallery">
+
+<img src="https://picsum.photos/400/250?1">
+<img src="https://picsum.photos/400/250?2">
+<img src="https://picsum.photos/400/250?3">
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 NovaLauncher</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
