@@ -3,192 +3,104 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NovaX Launcher</title>
-
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<!-- GSAP -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.0/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.0/ScrollTrigger.min.js"></script>
-
-<!-- Particles.js -->
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
-<style>
-
-/* RESET & BODY */
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Inter',sans-serif;background:#0a0f1c;color:white;overflow-x:hidden;}
-a{text-decoration:none;color:inherit;}
-
-/* NAVBAR */
-nav{
-position:fixed;top:0;width:100%;display:flex;justify-content:space-between;align-items:center;
-padding:20px 60px;background:rgba(10,10,20,0.6);backdrop-filter:blur(10px);z-index:1000;
-}
-.logo{
-font-size:26px;font-weight:700;background:linear-gradient(90deg,#5ee7ff,#a78bfa);
--webkit-background-clip:text;color:transparent;
-}
-nav ul{display:flex;list-style:none;}
-nav ul li{margin-left:30px;}
-nav ul li a{font-weight:500;transition:0.3s;}
-nav ul li a:hover{color:#5ee7ff;}
-
-/* HERO */
-.hero{
-position:relative;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
-overflow:hidden;
-}
-#particles-js{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;}
-.hero h1{
-font-size:70px;font-weight:700;z-index:1;background:linear-gradient(90deg,#7dd3fc,#a78bfa);
--webkit-background-clip:text;color:transparent;
-}
-.hero p{margin-top:20px;font-size:20px;max-width:600px;color:#a0a8c0;z-index:1;}
-.hero button{
-margin-top:40px;padding:18px 50px;border:none;border-radius:50px;font-size:18px;
-background:linear-gradient(45deg,#5ee7ff,#8a5cff);color:white;cursor:pointer;z-index:1;
-transition:0.3s;
-}
-.hero button:hover{transform:scale(1.08);box-shadow:0 0 40px rgba(120,120,255,0.6);}
-
-/* SECTIONS */
-section{padding:120px 10%;position:relative;z-index:1;}
-h2{font-size:48px;margin-bottom:40px;text-align:center;background:linear-gradient(90deg,#5ee7ff,#a78bfa);-webkit-background-clip:text;color:transparent;}
-
-/* STORE */
-.store-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;}
-.game{
-background:#11172a;border-radius:20px;padding:25px;overflow:hidden;cursor:pointer;
-transition:0.5s;
-}
-.game:hover{transform:translateY(-10px) scale(1.05);box-shadow:0 20px 60px rgba(0,0,0,0.7);}
-.game h3{margin-top:10px;}
-.game p{margin-top:8px;color:#9aa4c6;}
-
-/* FEATURES */
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:40px;margin-top:60px;}
-.feature-box{background:#11172a;padding:30px;border-radius:20px;transition:0.5s;}
-.feature-box:hover{transform:scale(1.05);background:#161d36;}
-
-/* DOWNLOAD */
-.download{text-align:center;}
-.download-buttons{margin-top:40px;display:flex;justify-content:center;flex-wrap:wrap;gap:20px;}
-.download-buttons button{
-padding:18px 40px;border-radius:50px;border:none;font-size:18px;cursor:pointer;background:#1c2547;color:white;transition:0.3s;
-}
-.download-buttons button:hover{background:#5ee7ff;color:black;transform:scale(1.1);}
-
-/* COMMUNITY */
-.community{text-align:center;}
-.community-links{margin-top:40px;display:flex;justify-content:center;gap:30px;flex-wrap:wrap;}
-.community-links div{padding:20px 40px;border-radius:20px;background:#12182d;transition:0.3s;cursor:pointer;}
-.community-links div:hover{transform:translateY(-5px);background:#1c2547;}
-
-/* FOOTER */
-footer{text-align:center;padding:40px;background:#070b14;color:#7c86a7;}
-
-/* SCROLL ANIMATION */
-.reveal{opacity:0;transform:translateY(60px);transition:1s;}
-.reveal.active{opacity:1;transform:translateY(0);}
-</style>
+<title>Game Launcher</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <!-- NAVBAR -->
 <nav>
-<div class="logo">NovaX</div>
+<div class="logo">MyLauncher</div>
 <ul>
 <li><a href="#home">Home</a></li>
 <li><a href="#store">Store</a></li>
 <li><a href="#features">Features</a></li>
-<li><a href="#download">Download</a></li>
+<li><a href="#library">Library</a></li>
 <li><a href="#community">Community</a></li>
 </ul>
 </nav>
 
-<!-- HERO -->
-<section class="hero" id="home">
-<div id="particles-js"></div>
-<h1>Next Gen Game Launcher</h1>
-<p>Launch games faster, manage libraries, and connect with millions of players worldwide.</p>
-<button>Download Now</button>
+<!-- HOME -->
+<section id="home" class="section hero">
+<h1>Welcome to MyLauncher</h1>
+<p>Launch your favorite games and manage your library easily.</p>
+<button class="btn-primary">Get Started</button>
 </section>
 
 <!-- STORE -->
-<section id="store" class="reveal">
-<h2>Game Store</h2>
-<div class="store-grid">
-<div class="game"><h3>Cyber Arena</h3><p>Futuristic shooter</p></div>
-<div class="game"><h3>Sky Realms</h3><p>Fantasy MMORPG</p></div>
-<div class="game"><h3>Drift Legends</h3><p>High-speed racing simulator</p></div>
-<div class="game"><h3>Neon Blitz</h3><p>Action platformer</p></div>
+<section id="store" class="section reveal">
+<h2>Store</h2>
+<div class="cards">
+<div class="card">
+<h3>Cyber Arena</h3>
+<p>Futuristic shooter</p>
+</div>
+<div class="card">
+<h3>Sky Realms</h3>
+<p>Fantasy MMORPG</p>
+</div>
+<div class="card">
+<h3>Drift Legends</h3>
+<p>High-speed racing</p>
+</div>
 </div>
 </section>
 
 <!-- FEATURES -->
-<section id="features" class="reveal">
+<section id="features" class="section reveal">
 <h2>Features</h2>
-<div class="features">
-<div class="feature-box"><h3>Ultra Fast Updates</h3><p>Patch games instantly with optimized servers.</p></div>
-<div class="feature-box"><h3>Cloud Saves</h3><p>Progress syncs across devices automatically.</p></div>
-<div class="feature-box"><h3>Friends System</h3><p>Chat and invite friends directly from launcher.</p></div>
-<div class="feature-box"><h3>Performance Boost</h3><p>Built-in optimizations improve FPS while gaming.</p></div>
+<div class="features-grid">
+<div class="feature-box">
+<h3>Cloud Saves</h3>
+<p>Save progress across devices.</p>
+</div>
+<div class="feature-box">
+<h3>Auto Updates</h3>
+<p>Games update automatically.</p>
+</div>
+<div class="feature-box">
+<h3>Friends & Chat</h3>
+<p>Connect with friends easily.</p>
+</div>
 </div>
 </section>
 
-<!-- DOWNLOAD -->
-<section id="download" class="download reveal">
-<h2>Download Launcher</h2>
-<div class="download-buttons">
-<button>Windows</button>
-<button>MacOS</button>
-<button>Linux</button>
+<!-- LIBRARY -->
+<section id="library" class="section reveal">
+<h2>Game Library</h2>
+<div class="library-grid">
+<div class="game-card">
+<img src="https://upload.wikimedia.org/wikipedia/en/a/a5/Grand_Theft_Auto_V.png" alt="GTA V">
+<h3>GTA V</h3>
+<a href="https://example.com/gta5-download" target="_blank" class="download-btn">⬇ Download</a>
+</div>
+<div class="game-card">
+<img src="https://upload.wikimedia.org/wikipedia/en/2/22/Grand_Theft_Auto_IV.jpg" alt="GTA IV">
+<h3>GTA IV</h3>
+<a href="https://example.com/gta4-download" target="_blank" class="download-btn">⬇ Download</a>
+</div>
+<div class="game-card">
+<img src="https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover.png" alt="Minecraft PE">
+<h3>Minecraft PE</h3>
+<a href="https://example.com/minecraftpe-download" target="_blank" class="download-btn">⬇ Download</a>
+</div>
 </div>
 </section>
 
 <!-- COMMUNITY -->
-<section id="community" class="community reveal">
-<h2>Join the Community</h2>
+<section id="community" class="section reveal">
+<h2>Community</h2>
 <div class="community-links">
 <div>Discord</div>
 <div>Forums</div>
 <div>Events</div>
-<div>Support</div>
 </div>
 </section>
 
 <footer>
-NovaX Launcher © 2026
+<p>© 2026 MyLauncher. All rights reserved.</p>
 </footer>
 
-<!-- SCRIPTS -->
-<script>
-// PARTICLES.JS
-particlesJS("particles-js", {
-"particles": {
-"number": {"value":80,"density":{"enable":true,"value_area":800}},
-"color":{"value":"#5ee7ff"},
-"shape":{"type":"circle"},
-"opacity":{"value":0.5},
-"size":{"value":3,"random":true},
-"line_linked":{"enable":true,"distance":150,"color":"#5ee7ff","opacity":0.4,"width":1},
-"move":{"enable":true,"speed":2,"direction":"none","random":false,"straight":false,"out_mode":"out"}
-},
-"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"}},"modes":{"repulse":{"distance":100}}}
-});
-
-// GSAP Scroll Animations
-gsap.utils.toArray('.reveal').forEach(section=>{
-  gsap.fromTo(section,{y:50,opacity:0},{y:0,opacity:1,duration:1,scrollTrigger:{trigger:section,start:"top 80%"}})
-});
-
-// NAVBAR SHADOW ON SCROLL
-window.addEventListener('scroll',()=>{document.querySelector('nav').style.boxShadow = window.scrollY>50?"0 5px 25px rgba(0,0,0,0.6)":"none";});
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
